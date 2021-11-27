@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+img[alt="alt=www.000webhost.com"] {
+  display: none;
+}
+/* stylisation de la bar de progression */
+.bar-progression {
+  display: none;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  width: 50%;
+}
+.bar-progression .bar {
+  width: 0px;
+  transition: all 0.7s ease-in-out;
+  height: 4px;
+  display: none;
+  background-color: turquoise;
+}
+/* utiliser dans le javascript */
+
+/* fin */
+.bar-progression .page1 {
+  position: absolute;
+  left: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(8, 138, 99);
+  transition: all 0.7s ease-in-out;
+  padding: 10px 14px;
+}
+.bar-progression .page2 {
+  position: absolute;
+  right: 0;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(158, 147, 147);
+  transition: all 0.7s ease-in-out;
+  padding: 10px 14px;
+}
+/* fin */
+/* position du container par rapport a toute la page */
+.container {
+  margin: auto;
+  width: 50%;
+}
+
+.container .container__secondaire {
+  margin: 100px auto;
+  background: url("img/iPhone 6, 7, 8.png") no-repeat center;
+  padding-right: 30px;
+  width: 60%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
+}
+/* fin */
+
+/* stylisation des boutons de validation et d'annulation */
+.valide input {
+  border: 1px solid black;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.valide {
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-evenly;
+}
+.valide .annuler {
+  border: 1px solid brown;
+  background-color: brown;
+}
+.valide .envoyer {
+  border: 1px solid green;
+  background-color: green;
+}
+/* fin */
+footer {
+  background-color: black;
+  padding: 10px;
+}
+.fabrique {
+  margin: 0 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+/* stylisation du titre du formulaire */
+.container .container__secondaire .titre {
+  text-align: center;
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+  display: none;
+}
+/* fin */
+
+/* stylisation des champs(input) du formulaire */
+
+.container .container__secondaire .champ {
+  width: 95%;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  box-shadow: 1px 1px 4px 1px rgba(179, 101, 114, 0.911);
+}
+.container .container__secondaire .input {
+  display: block;
+  align-items: center;
+  width: 80%;
+  padding-left: 40px;
+  font-size: 17px;
+  justify-content: space-between;
+}
+/* fin */
+.retour {
+  border: none;
+  padding: 8px 10px;
+  background-color: chocolate;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* stylisation de la parti sexe du formulaire */
+.container .container__secondaire .sexe {
+  display: flex;
+  font-size: 17px;
+  justify-content: space-evenly;
+}
+.bar-sexe .point {
+  cursor: pointer;
+}
+.container .container__secondaire .sexe .bar-sexe {
+  width: 50px;
+  border-radius: 10px;
+  background-color: silver;
+  position: relative;
+}
+.container .container__secondaire .sexe .bar-sexe .point {
+  background-color: green;
+  width: 40%;
+  border-radius: 50%;
+  height: 100%;
+  position: absolute;
+  right: 7px;
+  transition: 0.5s ease-in;
+}
+
+/* class utiliser dans le javascript pour le toogle du choix du sexe */
+.toogle {
+  left: 7px;
+  transition: 0.5s ease-in;
+}
+/* fin */
+.btn-suivant button {
+  display: none;
+}
+.retour {
+  display: none;
+}
+/* utiliser dans le javascript pour changer le shadow des inputy lorsqu'on ecrit dedans */
+/* ne marche pas voir comment faire */
+.shadow {
+  box-shadow: 1px 1px 4px 1px rgba(10, 138, 74, 0.993);
+}
+/* fin */
+
+/* adaptation des types d'ecran  */
+@media screen and (max-width: 700px) {
+  .container {
+    margin: auto;
+    width: 100%;
+  }
+  .container .container__secondaire .input {
+    display: block;
+  }
+  .inner {
+    transition: all 0.7s ease-in-out;
+    display: flex;
+    width: 200%;
+
+  }
+
+  .translate-next {
+    transition: all 0.7s ease-in-out;
+    transform: translateX(-50%);
+  }
+  /* class utiliser dans le javascript pour change le background-color du formulaire */
+  /* ne marche pas voir comment faire */
+  .bg-change {
+    background: url("img/bg_2.png") no-repeat center;
+  }
+  /* fin */
+  .translate-prevouis {
+    transition: all 0.7s ease-in-out;
+    transform: translateX(-50%);
+  }
+  .bar-progression {
+    display: flex;
+  }
+  .container .container__secondaire {
+    overflow: hidden;
+    position: relative;
+  }
+  .inner-1 {
+    position: relative;
+    width: 50%;
+  }
+  .inner-2 {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  /* fin */
+  .retour {
+    display: block;
+  }
+  .btn-suivant button {
+    display: block;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    border: 1px solid brown;
+    background-color: brown;
+    padding: 8px 10px;
+    color: white;
+    border-radius: 8px;
+  }
+}
