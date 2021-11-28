@@ -61,11 +61,6 @@
                             <p><button class="retour"><i class="fas fa-arrow-left"></i></button></p>
                             <p><input class="envoyer" type="submit" value="Envoyer"></p>
                         </div>
-                        
-                    </div>
-                    <div class="inner-3">
-                        <p class="inscrit">FELICITATION</p>
-                        <P class="inscrit">VOUS ETES BIEN INSCRIPT</P>
                     </div>
                 </div>
                 
