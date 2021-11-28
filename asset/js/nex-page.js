@@ -6,7 +6,12 @@ const btn_next = document.querySelector('.btn-suivant >button')
 const page2 = document.querySelector('.page2')
 const bar_progress = document.querySelector('.bar')
 
+const envoyer = document.querySelector('.envoyer')
 
+// au click sur le bouttom envoyer les autres partie de l'inscription disparaissent
+
+
+// fin
 btn_next.addEventListener('click' , (e)=>{
     e.preventDefault()
     container.classList.add('translate-next')

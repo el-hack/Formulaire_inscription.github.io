@@ -54,12 +54,18 @@
                         <p class="input matriculeLoko">
                             <label for="matricule">Matricule Loko</label>
                             <input class="champ" type="text" name="matricule" id="matricule">
+                            <input type="checkbox" name="condition" id="condition"><a href="">J'ai lu et j'accepte les règles</a>
                         </p>
+                        
                         <div class="valide">
                             <p><button class="retour"><i class="fas fa-arrow-left"></i></button></p>
                             <p><input class="envoyer" type="submit" value="Envoyer"></p>
                         </div>
                         
+                    </div>
+                    <div class="inner-3">
+                        <p class="inscrit">FELICITATION</p>
+                        <P class="inscrit">VOUS ETES BIEN INSCRIPT</P>
                     </div>
                 </div>
                 
