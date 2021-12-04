@@ -1,15 +1,18 @@
 body {
   margin: 0;
+  height: 100vh;
+  width: 100%;
   padding: 0;
-  background-color: grey;
+  background: url("img/bg_2.png") no-repeat center;
+  background-size: 80%;
+  overflow: hidden;
 }
 
 /* stylisation des regles */
-#condition{
+#condition {
   margin-left: 30px;
   margin-top: 10px;
   padding: 0;
-
 }
 /* stylisation de la bar de progression */
 .bar-progression {
@@ -54,11 +57,12 @@ body {
 .container {
   margin: auto;
   width: 50%;
+  position: relative;
+  display: grid;
 }
 
 .container .container__secondaire {
-  margin: 100px auto;
-  background: url("img/iPhone 6, 7, 8.png") no-repeat center;
+  margin: 60px auto;
   padding-right: 30px;
   width: 60%;
   padding-top: 10px;
@@ -110,7 +114,8 @@ footer {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
   display: none;
 }
 /* fin */
@@ -124,7 +129,7 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   border-radius: 5px;
   outline: none;
   padding-left: 10px;
-  box-shadow: 1px 1px 4px 1px rgba(179, 101, 114, 0.911);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.3);
 }
 .container .container__secondaire .input {
   display: block;
@@ -164,13 +169,13 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
   border-radius: 50%;
   height: 100%;
   position: absolute;
-  right: 7px;
+  right: 0px;
   transition: 0.5s ease-in;
 }
 
 /* class utiliser dans le javascript pour le toogle du choix du sexe */
 .toogle {
-  left: 7px;
+  left: 0px;
   transition: 0.5s ease-in;
 }
 /* fin */
@@ -200,7 +205,6 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
     transition: all 0.7s ease-in-out;
     display: flex;
     width: 300%;
-
   }
 
   .translate-next {
@@ -236,10 +240,10 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
     width: 33.3%;
     margin-left: 10px;
   }
-  .inner-3{
+  .inner-3 {
     width: 33.3%;
   }
-  .inscrit{
+  .inscrit {
     margin-left: 40px;
   }
   /* fin */

@@ -1,3 +1,33 @@
+<?php 
+use Autoloade\Autoload;
+use Database\DBConnection;
+
+$erreur = '';
+if(isset($_POST['envoyer'])){
+    if(!empty($_POST['nom']) AND !empty($_POST['prenom'])){
+        require "./asset/Database/DBConnection.php";
+    require "./asset/Database/Autoload.php";
+    Autoload::register();
+    $connect = new DBConnection();
+    $connect->insert($_POST['nom'] , $_POST['prenom'] ,$_POST['tel'] ,$_POST['email'] ,$_POST['matricule']);
+    }else{
+        $erreur = "
+            <div style= 'color:white;
+                background-color:red;
+                text-align:center;
+                padding:10px;
+                border-radius:8px;
+                position:absolute;
+                top:5%;
+                left:50%;
+                transform:translate(-50%,-5%);
+                transition: all ease-in-out;'>Veuillez rempli tout les champs</div>";
+    }
+    
+}
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,18 +39,22 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <form action="" method="post">
+    <di class="container">
+            <?php
+              echo $erreur;
+            ?>
+        <form action="" method="POST">
             <div class="container__secondaire">
-                
                 <p class="titre">
                     INSCRIVEZ-VOUS 
                 </p>
+                
                 <div class="bar-progression">
                     <p class="page1">1</p>
                     <p class="bar"></p>
                     <p class="page2">2</p>
                 </div>
+                
                 <div class="inner">
                     <div class="inner-1">
                         <p class="input nom">
@@ -48,8 +82,8 @@
                             <input class="champ" type="tel" name="tel" id="tel">
                         </p>
                         <p class="input mail">
-                            <label for="tel">Email</label>
-                            <input class="champ" type="mail" name="tel" id="tel">
+                            <label for="email">Email</label>
+                            <input class="champ" type="email" name="email" id="email">
                         </p>
                         <p class="input matriculeLoko">
                             <label for="matricule">Matricule Loko</label>
@@ -59,17 +93,15 @@
                         
                         <div class="valide">
                             <p><button class="retour"><i class="fas fa-arrow-left"></i></button></p>
-                            <p><input class="envoyer" type="submit" value="Envoyer"></p>
+                            <p><input class="envoyer" type="submit" value="Valider" name="envoyer"></p>
                         </div>
                     </div>
-                </div>
+                    
                 
             </div>
+            
         </form>
     </div>
-    <footer>
-        <p class="fabrique ">Droit d'auteur ©2021 By Gninmin</p>
-    </footer>
     <script src="asset/js/shadow.js"></script>
     <script src="asset/js/nex-page.js"></script>
     <script src="asset/js/toogle.js"></script>
