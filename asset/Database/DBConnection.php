@@ -32,14 +32,24 @@ class DBConnection
     public function charset($format){
        return htmlspecialchars($format);
     }
+
+
     public function insert($nom , $prenom , $tel ,$email , $matricule){
-    $nom = $this->charset($nom) ;
-    $prenom = $this->charset($prenom);
-    $tel = $this->charset($tel);
-    $email = $this->charset($email);
-    $matricule = $this->charset($matricule);
-    $requete = $this->getPDO()->prepare("INSERT INTO etudiants(nom,prenoms,telephone,email,matriculeLoko)  VALUES(?,?,?,?,?)");
-    $requete->execute(array($nom,$prenom,$tel,$email,$matricule));
+        $reqExist = $this->getPDO()->prepare("SELECT * FROM etudiants WHERE email= ?");
+        $reqExist->execute(array($email));
+        $existe = $reqExist->rowCount();
+
+        if(!$existe > 0){
+            $nom = $this->charset($nom) ;
+            $prenom = $this->charset($prenom);
+            $tel = $this->charset($tel);
+            $email = $this->charset($email);
+            $matricule = $this->charset($matricule);
+            $requete = $this->getPDO()->prepare("INSERT INTO etudiants(nom,prenoms,telephone,email,matriculeLoko)  VALUES(?,?,?,?,?)");
+            $requete->execute(array($nom,$prenom,$tel,$email,$matricule));
+        }
+           
+        
     }
 
 }

@@ -21,7 +21,7 @@ if(isset($_POST['envoyer'])){
                 top:5%;
                 left:50%;
                 transform:translate(-50%,-5%);
-                transition: all ease-in-out;'>Veuillez rempli tout les champs</div>";
+                transition: all ease-in-out;'>Veuillez renseigner tout les champs</div>";
     }
     
 }
